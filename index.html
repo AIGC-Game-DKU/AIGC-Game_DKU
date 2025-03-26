@@ -10,16 +10,20 @@
 
     <!-- Navbar -->
     <nav class="bg-gray-800 p-4">
-        <div class="container mx-auto flex justify-between">
-            <h1 class="text-xl font-bold">AIGC</h1>
-            <ul class="flex space-x-4">
-                <li><a href="#about" class="hover:text-blue-400">About</a></li>
-                <li><a href="#ai-research" class="hover:text-blue-400">AI Research</a></li>
-                <li><a href="#media" class="hover:text-blue-400">Gallery</a></li>
-                <li><a href="#contribute" class="hover:text-blue-400">Contribute</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container mx-auto flex justify-between">
+        <h1 class="text-lg font-bold">AIGC-Game_DKU</h1> 
+        <ul class="flex space-x-4">
+            <li><a href="#about" class="text-sm hover:text-blue-400">Project Overview</a></li>
+            <li><a href="#technology" class="text-sm hover:text-blue-400">Core Technology</a></li>
+            <li><a href="#progress" class="text-sm hover:text-blue-400">Current Progress</a></li>
+            
+            <li><a href="#Groups" class="text-sm hover:text-blue-400">Groups</a></li>
+            <li><a href="#team" class="text-sm hover:text-blue-400">Development Team</a></li>
+            <li><a href="#contact" class="text-sm hover:text-blue-400">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
 
     <!-- Hero Section -->
     <header class="text-center py-20">
@@ -29,49 +33,95 @@
 
     <!-- About Section -->
     <section id="about" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">About AIGC</h3>
-        <p class="mt-4 text-gray-300">AIGC is an open-source project that integrates AI into game development, allowing developers to create dynamic NPCs.</p>
-    </section>
-
-    <!-- AI Research Section -->
-    <section id="ai-research" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">AI Research</h3>
-        <ul class="mt-4 list-disc list-inside text-gray-300">
-            <li><strong>Player Interaction (Top Layer): </strong> The player actively participates in shaping the narrative by
-                making decisions that impact the world and characters. The game adjusts dynamically to the
-                player's choices, providing a more personalized and engaging experience than traditional
-                games.</li>
-            <li><strong>Game Environment (Middle Layer): </strong> This is where players interact with the world. It features AIdriven NPCs (non-playable characters) that not only respond to players but also interact with
-                each other. These NPCs help drive the story forward, creating a rich, social environment where
-                the actions of one character can influence the entire narrative.</li>
-            <li><strong>BWorld State Manager (Base Layer):</strong> This is the core of the game, where the world's events,
-                characters, and timeline are managed. It ensures that everything makes sense and is logically
-                consistent as the story progresses.</li>
-            <li><strong>Memory Management:</strong> Sustaining NPC personality and story continuity.</li>
-        </ul>
-    </section>
-
-    <!-- Gallery Section (Video & Images) -->
-    <section id="media" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">Media Gallery</h3>
-
+        <h3 class="text-2xl font-bold">Project Overview</h3>
+        <p class="mt-4 text-gray-300">Our project focuses on developing a new type of interactive narrative game that leverages AI
+            to create dynamic, evolving stories. Unlike traditional games that rely on fixed, pre-written
+            scripts, our game allows the story to change based on the player's actions, creating a more
+            immersive experience where the narrative is shaped in real time by both the player and the
+            game world.
+            </p>
         
+            <section id="technology" class="container mx-auto px-4 py-10">
+                <h3 class="text-2xl font-bold">Core Technology</h3>
+                <p class="mt-4 text-gray-300">Our project relies on five key components to build a dynamic and immersive game experience:</p>
+                <ul class="list-disc pl-6 mt-4 text-gray-300">
+                    <li>
+                        <strong>World State Manager (Base Layer):</strong> Manages game events, characters, and the timeline to ensure a consistent and logical progression of the story.
+                        <p class="mt-2 text-gray-500">Method(s) used to achieve this:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the methods used to manage the world events, characters, and timeline..."></textarea>
+                        <p class="mt-2 text-gray-500">Effect(s) achieved:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the effects achieved, such as logical progression, consistency..."></textarea>
+                    </li>
+                    <li>
+                        <strong>Game Environment (Middle Layer):</strong> Hosts AI-driven NPCs that interact with both players and each other, creating a rich social environment that influences the narrative.
+                        <p class="mt-2 text-gray-500">Method(s) used to achieve this:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the methods used to create and manage the game environment, NPC interactions..."></textarea>
+                        <p class="mt-2 text-gray-500">Effect(s) achieved:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the effects achieved, such as social interactions, narrative influence..."></textarea>
+                    </li>
+                    <li>
+                        <strong>Player Interaction (Top Layer):</strong> Acts as the front-end, managing user inputs and outputs. It controls how the player interacts with the game world, ensuring a smooth and intuitive experience.
+                        <p class="mt-2 text-gray-500">Method(s) used to achieve this:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the methods used to manage user inputs and outputs, front-end interface..."></textarea>
+                        <p class="mt-2 text-gray-500">Effect(s) achieved:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the effects achieved, such as user interaction flow, intuitive experience..."></textarea>
+                    </li>
+                    <li>
+                        <strong>Memory Manager:</strong> Optimizes memory for smooth performance and resource efficiency during gameplay.
+                        <p class="mt-2 text-gray-500">Method(s) used to achieve this:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the methods used for memory management..."></textarea>
+                        <p class="mt-2 text-gray-500">Effect(s) achieved:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the effects achieved, such as improved performance, memory optimization..."></textarea>
+                    </li>
+                    <li>
+                        <strong>Game Design Team:</strong> Develops scripts, plots, and the overarching narrative to guide the player's experience.
+                        <p class="mt-2 text-gray-500">Method(s) used to achieve this:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the methods used for game design, scripts, and plot creation..."></textarea>
+                        <p class="mt-2 text-gray-500">Effect(s) achieved:</p>
+                        <textarea class="w-full h-20 mt-2 p-2 border border-gray-300 rounded" placeholder="Describe the effects achieved, such as immersive narrative, engaging plot..."></textarea>
+                    </li>
+                </ul>
+            </section>
+            
+            
+            
+            
 
-        <!-- Images -->
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
-            <img src="images/npc1.png" alt="NPC Character 1" class="rounded-lg shadow-lg">
-            <img src="images/npc2.png" alt="NPC Character 2" class="rounded-lg shadow-lg">
-            <img src="images/npc3.png" alt="NPC Character 3" class="rounded-lg shadow-lg">
-        </div>
+
+    <!-- Progress Section -->
+    <section id="progress" class="container mx-auto px-4 py-10">
+        <h3 class="text-2xl font-bold">Current Progress</h3>
+        <p class="mt-4 text-gray-300"> Bottom Layer</p>
+        <p class="mt-4 text-gray-300"></p>
+        <p class="mt-4 text-gray-300"></p>
+        <p class="mt-4 text-gray-300"></p>
+        <p class="mt-4 text-gray-300"></p>
+        <p class="mt-4 text-gray-300"></p>
+
     </section>
 
-    <!-- Contribution Section -->
-    <section id="contribute" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">Get Involved</h3>
-        <p class="mt-4 text-gray-300">Join our open-source community on GitHub and help shape the future of AI in gaming.</p>
-        <a href="https://github.com/YOUR_REPO" class="text-blue-400 hover:underline">Visit our GitHub Repository</a>
+    
+
+    
+
+    <!-- Team Section -->
+    <section id="team" class="container mx-auto px-4 py-10">
+        <h3 class="text-2xl font-bold">Development Team</h3>
+        <p class="mt-4 text-gray-300">We are a passionate and creative team dedicated to integrating AI into game development to revolutionize player experiences.</p>
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto px-4 py-10">
+        <h3 class="text-2xl font-bold">Contact & Recruitment</h3>
+        <p class="mt-4 text-gray-300">Interested in learning more about AIGC or joining our development community? Reach out to us for more information.</p>
+        <a href="https://github.com/AIGC-Game-DKU" class="text-blue-400 hover:underline">Visit our GitHub Repository</a>
+    
+    
+        <p class="mt-4 text-gray-300">Click the link below to download the requirements for joining</p>
+        <a href="/Static/Project information and Resources.pdf" download class="text-blue-400 hover:underline">Click here to download</a>
+    </section>
+    
+    
     <!-- Footer -->
     <footer class="bg-gray-800 text-center py-4 mt-10">
         <p class="text-gray-400">&copy; 2025 AIGC Project | Open-Source AI for Games</p>
