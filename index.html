@@ -1,222 +1,173 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIGC - AI Powered NPCs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-900 text-white">
-
-    <!-- Navbar -->
-    <nav class="bg-gray-800 p-4">
-    <div class="container mx-auto flex justify-between">
-        <h1 class="text-lg font-bold">AIGC-Game_DKU</h1> 
-        <ul class="flex space-x-4">
-            <li><a href="#about" class="text-sm hover:text-blue-400">Project Overview</a></li>
-            <li><a href="#technology" class="text-sm hover:text-blue-400">Core Technology</a></li>
-            <li><a href="#progress" class="text-sm hover:text-blue-400">Current Progress</a></li>
-            
-            <li><a href="#Groups" class="text-sm hover:text-blue-400">Groups</a></li>
-            <li><a href="#team" class="text-sm hover:text-blue-400">Development Team</a></li>
-            <li><a href="#contact" class="text-sm hover:text-blue-400">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-
+<html lang="en" class="smooth-scroll">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AIGC - [页面标题]</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+                const sections = document.querySelectorAll('.fade-in-section');
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if(sectionTop < windowHeight * 0.75) {
+                        section.classList.add('visible');
+                    }
+                });
+            });
+        </script>
+        <style>
+            .fade-in-section {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .fade-in-section.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .smooth-scroll {
+                scroll-behavior: smooth;
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+            .gradient-bg {
+                background: linear-gradient(135deg, #f0f5ff 0%, #e6e9ff 100%);
+            }
+        </style>
+    </head>
+<body class="bg-white text-gray-800">
+    <nav class="bg-white/80 backdrop-blur-sm shadow-sm p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">AIGC-Game_DKU</a> 
+            <ul class="flex space-x-8">
+                <li><a href="about.html" class="text-sm hover:text-blue-600 transition-colors">Project Overview</a></li>
+                <li><a href="technology.html" class="text-sm hover:text-blue-600 transition-colors">Core Technology</a></li>
+                <li><a href="progress.html" class="text-sm hover:text-blue-600 transition-colors">Current Progress</a></li>
+                <li><a href="team.html" class="text-sm hover:text-blue-600 transition-colors">Development Team</a></li>
+                <li><a href="index.html#contact" class="text-sm hover:text-blue-600 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
-    <header class="text-center py-20">
-        <h2 class="text-4xl font-bold">Empowering NPCs with AI</h2>
-        <p class="mt-4 text-gray-400">A platform to create immersive game experiences with AI-generated NPCs.</p>
+    <header class="pt-32 pb-24 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <h2 class="text-5xl font-bold mb-6 text-gray-900">The Platform for Building AI-Powered NPCs</h2>
+                    <p class="text-xl text-gray-600 mb-8">Create immersive game experiences with NPCs that learn, adapt, and evolve through player interactions.</p>
+                    <div class="flex gap-4">
+                        <a href="about.html" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Learn More
+                        </a>
+                        <a href="https://github.com/AIGC-Game-DKU" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover-scale">
+                        <img src="Resources/demo.png" alt="AIGC Demo" class="rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">Project Overview</h3>
-        <p class="mt-4 text-gray-300">Our project focuses on developing a new type of interactive narrative game that leverages AI
-            to create dynamic, evolving stories. Unlike traditional games that rely on fixed, pre-written
-            scripts, our game allows the story to change based on the player's actions, creating a more
-            immersive experience where the narrative is shaped in real time by both the player and the
-            game world.
-            </p>
-        
-            <section id="technology" class="container mx-auto px-4 py-10">
-                <h3 class="text-2xl font-bold">Core Technology</h3>
-                <p class="mt-4 text-gray-300">Our project relies on five key components to build a dynamic and immersive game experience:</p>
-                <ul class="list-disc pl-6 mt-4 text-gray-300">
-                    <li>
-                        <strong>World State Manager (Base Layer):</strong> Manages game events, characters, and the timeline to ensure a consistent and logical progression of the story.
-                        <p class="mt-2 text-gray-500"><strong>Method(s) used to achieve this:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the methods used to manage world events, characters, and timeline)</span>
-                        </p>
-                        <p class="mt-2 text-gray-500"><strong>Effect(s) achieved:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the effects achieved, such as logical progression, consistency)</span>
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Game Environment (Middle Layer):</strong> Hosts AI-driven NPCs that interact with both players and each other, creating a rich social environment that influences the narrative.
-                        <p class="mt-2 text-gray-500"><strong>Method(s) used to achieve this:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the methods used to create and manage the game environment, NPC interactions)</span>
-                        </p>
-                        <p class="mt-2 text-gray-500"><strong>Effect(s) achieved:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the effects achieved, such as social interactions, narrative influence)</span>
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Player Interaction (Top Layer):</strong> Acts as the front-end, managing user inputs and outputs. It controls how the player interacts with the game world, ensuring a smooth and intuitive experience.
-                        <p class="mt-2 text-gray-500"><strong>Method(s) used to achieve this:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the methods used to manage user inputs and outputs, front-end interface)</span>
-                        </p>
-                        <p class="mt-2 text-gray-500"><strong>Effect(s) achieved:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the effects achieved, such as user interaction flow, intuitive experience)</span>
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Memory Manager:</strong> Optimizes memory for smooth performance and resource efficiency during gameplay.
-                        <p class="mt-2 text-gray-500"><strong>Method(s) used to achieve this:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the methods used for memory management)</span>
-                        </p>
-                        <p class="mt-2 text-gray-500"><strong>Effect(s) achieved:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the effects achieved, such as improved performance, memory optimization)</span>
-                        </p>
-                    </li>
-                    <li>
-                        <strong>Game Design Team:</strong> Develops scripts, plots, and the overarching narrative to guide the player's experience.
-                        <p class="mt-2 text-gray-500"><strong>Method(s) used to achieve this:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the methods used for game design, scripts, and plot creation)</span>
-                        </p>
-                        <p class="mt-2 text-gray-500"><strong>Effect(s) achieved:</strong> 
-                            <span class="text-gray-400">(Leave space to describe the effects achieved, such as immersive narrative, engaging plot)</span>
-                        </p>
-                    </li>
-                </ul>
-            </section>
+    <!-- Key Features -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-gray-900">Key Features</h3>
+                <p class="text-gray-600 mt-4">Advanced capabilities that make our NPCs truly intelligent</p>
+            </div>
             
-            
-            
-            
-            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in-section">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover-scale">
+                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Advanced Memory System</h4>
+                    <p class="text-gray-600">NPCs remember past interactions and learn from experiences</p>
+                </div>
 
+                <div class="bg-white p-8 rounded-xl shadow-sm hover-scale">
+                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Dynamic Interactions</h4>
+                    <p class="text-gray-600">Real-time adaptation to player choices and behavior</p>
+                </div>
 
-    <!-- Progress Section -->
-    <section id="progress" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">Current Progress</h3>
-        
-        <!-- Bottom Layer -->
-        <div class="mt-6">
-            <h4 class="text-xl font-semibold text-gray-200">Bottom Layer (World State Manager)</h4>
-            <p class="mt-2 text-gray-300">Manages the core world logic, events, and character interactions.</p>
-            <p class="mt-2 text-gray-400 italic">Progress: [Team updates here]</p>
-            <img src="Resources/bottom.png" alt="Bottom Layer Progress" class="mt-4 w-full max-w-md mx-auto rounded-lg shadow-md">
-        </div>
-    
-        <!-- Middle Layer -->
-        <div class="mt-6">
-            <h4 class="text-xl font-semibold text-gray-200">Middle Layer (Game Environment)</h4>
-            <p class="mt-2 text-gray-300">Handles AI-driven NPCs, world interactions, and environmental logic.</p>
-            <p class="mt-2 text-gray-400 italic">Progress: [Team updates here]</p>
-            <img src="Resources/middle.png" alt="Middle Layer Progress" class="mt-4 w-full max-w-md mx-auto rounded-lg shadow-md">
-        </div>
-    
-        <!-- Top Layer -->
-        <div class="mt-6">
-            <h4 class="text-xl font-semibold text-gray-200">Top Layer (Player Interaction)</h4>
-            <p class="mt-2 text-gray-300">Manages player input, UI, and interaction logic.</p>
-            <p class="mt-2 text-gray-400 italic">Progress: [Team updates here]</p>
-            <img src="Resources/top.png" alt="Top Layer Progress" class="mt-4 w-full max-w-md mx-auto rounded-lg shadow-md">
-        </div>
-    
-        <!-- Game Design -->
-        <div class="mt-6">
-            <h4 class="text-xl font-semibold text-gray-200">Game Design</h4>
-            <p class="mt-2 text-gray-300">Develops scripts, narrative, and story progression.</p>
-            <p class="mt-2 text-gray-400 italic">Progress: [Team updates here]</p>
-            <img src="Resources/game.png" alt="Game Design Progress" class="mt-4 w-full max-w-md mx-auto rounded-lg shadow-md">
-        </div>
-    
-        <!-- Memory Management -->
-        <div class="mt-6">
-            <h4 class="text-xl font-semibold text-gray-200">Memory Management</h4>
-            <p class="mt-2 text-gray-300">Handles in-game memory storage and recall mechanisms.</p>
-            <p class="mt-2 text-gray-400 italic">Progress: [Team updates here]</p>
-            <img src="Resources/memory.png" alt="Memory Management Progress" class="mt-4 w-full max-w-md mx-auto rounded-lg shadow-md">
+                <div class="bg-white p-8 rounded-xl shadow-sm hover-scale">
+                    <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Secure & Reliable</h4>
+                    <p class="text-gray-600">Built with robust architecture and security in mind</p>
+                </div>
+            </div>
         </div>
     </section>
-    
-    
-    
-    
 
-    
+    <!-- Latest Updates -->
+    <section class="py-20 gradient-bg">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl font-bold text-gray-900">Latest Updates</h3>
+                <p class="text-gray-600 mt-4">See what's new in our development journey</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto fade-in-section">
+                <div class="bg-white p-6 rounded-xl shadow-lg hover-scale">
+                    <div class="text-sm text-blue-600 mb-2">April 19, 2025</div>
+                    <h4 class="text-lg font-bold mb-3 text-gray-900">Enhanced NPC Memory System</h4>
+                    <p class="text-gray-600">Implemented improved memory management for more consistent NPC behaviors.</p>
+                </div>
 
-    
-
-    <!-- Team Section -->
-    <!-- Team Section -->
-<section id="team" class="container mx-auto px-4 py-10">
-    <h3 class="text-2xl font-bold text-center">Development Team</h3>
-    <p class="mt-4 text-gray-300 text-center">Meet our dedicated team members who are building the future of AI-driven NPCs.</p>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-        <!-- Team Member Card -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-            <img src="/Resources/avatar1.jpg" alt="Member 1" class="w-24 h-24 mx-auto rounded-full border-4 border-gray-700">
-            <h4 class="text-lg font-semibold mt-4">Kaicheng Ma</h4>
-            <p class="text-gray-400">Age: </p>
-            <p class="text-gray-400">Major: </p>
-            <p class="text-blue-400 font-semibold mt-2">Group: Top Layer& Middle Layer</p>
+                <div class="bg-white p-6 rounded-xl shadow-lg hover-scale">
+                    <div class="text-sm text-blue-600 mb-2">April 15, 2025</div>
+                    <h4 class="text-lg font-bold mb-3 text-gray-900">New Team Members</h4>
+                    <p class="text-gray-600">Welcomed new developers to strengthen our core development team.</p>
+                </div>
+            </div>
         </div>
-
-        <!-- Another Team Member -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-            <img src="/Resources/avatar2.jpg" alt="Member 2" class="w-24 h-24 mx-auto rounded-full border-4 border-gray-700">
-            <h4 class="text-lg font-semibold mt-4">Binyan Sun</h4>
-            <p class="text-gray-400">Age: </p>
-            <p class="text-gray-400">Major: </p>
-            <p class="text-blue-400 font-semibold mt-2">Group: Middle Layer</p>
-        </div>
-
-        <!-- Add more members here -->
-        <div class="bg-gray-800 p-6 rounded-lg shadow-md text-center">
-            <img src="/Resources/avatar3.jpg" alt="Member 3" class="w-24 h-24 mx-auto rounded-full border-4 border-gray-700">
-            <h4 class="text-lg font-semibold mt-4">Ruisheng Sun</h4>
-            <p class="text-gray-400">Age: </p>
-            <p class="text-gray-400">Major: </p>
-            <p class="text-blue-400 font-semibold mt-2">Group: Bottom Layer</p>
-        </div>
-    </div>
-</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container mx-auto px-4 py-10">
-        <h3 class="text-2xl font-bold">Contact & Recruitment</h3>
-        <p class="mt-4 text-gray-300">Interested in learning more about AIGC or joining our development community? Reach out to us for more information.</p>
-        <a href="https://github.com/AIGC-Game-DKU" class="text-blue-400 hover:underline">Visit our GitHub Repository</a>
-    
-    
-        <p class="mt-4 text-gray-300">Click the link below to download the requirements for joining</p>
-        <a href="/Resources/Project information and Resources.pdf" download class="text-blue-400 hover:underline">Click here to download</a>
+    <section id="contact" class="py-20 bg-white fade-in-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="text-3xl font-bold mb-8 text-gray-900">Contact & Recruitment</h3>
+                <p class="text-gray-600 mb-8">Interested in learning more about AIGC or joining our development community? Reach out to us for more information.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/AIGC-Game-DKU" 
+                       class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        GitHub Repository
+                    </a>
+                    <a href="Resources/Project_Recruitment.pdf" download 
+                       class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Download Requirements
+                    </a>
+                </div>
+            </div>
+        </div>
     </section>
-    
-    
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-center py-4 mt-10">
-        <p class="text-gray-400">&copy; 2025 AIGC Project | Open-Source AI for Games</p>
-    </footer>
 
+    <footer class="bg-gray-100 text-center py-6">
+        <p class="text-gray-600">&copy; 2025 AIGC Project | Open-Source AI for Games</p>
+    </footer>
 </body>
 </html>
