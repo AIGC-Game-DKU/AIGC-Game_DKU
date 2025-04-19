@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="smooth-scroll">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AIGC - [页面标题]</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            window.addEventListener('scroll', () => {
+                const sections = document.querySelectorAll('.fade-in-section');
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if(sectionTop < windowHeight * 0.75) {
+                        section.classList.add('visible');
+                    }
+                });
+            });
+        </script>
+        <style>
+            .fade-in-section {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            }
+            .fade-in-section.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            .smooth-scroll {
+                scroll-behavior: smooth;
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+            .gradient-bg {
+                background: linear-gradient(135deg, #f0f5ff 0%, #e6e9ff 100%);
+            }
+        </style>
+    </head>
+<body class="bg-white text-gray-800">
+    <nav class="bg-white/80 backdrop-blur-sm shadow-sm p-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">AIGC-Game_DKU</a> 
+            <ul class="flex space-x-8">
+                <li><a href="about.html" class="text-sm hover:text-blue-600 transition-colors">Project Overview</a></li>
+                <li><a href="technology.html" class="text-sm hover:text-blue-600 transition-colors">Core Technology</a></li>
+                <li><a href="progress.html" class="text-sm hover:text-blue-600 transition-colors">Current Progress</a></li>
+                <li><a href="team.html" class="text-sm hover:text-blue-600 transition-colors">Development Team</a></li>
+                <li><a href="index.html#contact" class="text-sm hover:text-blue-600 transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-24">
+        <div class="container mx-auto px-4">
+            <h3 class="text-4xl font-bold text-center mb-16 text-gray-900">Development Progress</h3>
+            
+            <div class="max-w-4xl mx-auto fade-in-section">
+                <div class="relative">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-blue-200"></div>
+                    
+                    <div class="relative mb-16">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold z-10">1</div>
+                            <h4 class="text-xl font-bold ml-4 text-gray-900">Bottom Layer Progress</h4>
+                        </div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                                <p class="text-gray-600 mb-4">Manages the core world logic, events, and character interactions.</p>
+                                <div class="relative h-4 bg-gray-200 rounded-full">
+                                    <div class="absolute top-0 left-0 h-full bg-blue-600 rounded-full" style="width: 75%"></div>
+                                </div>
+                                <img src="Resources/bottom.png" alt="Bottom Layer Progress" class="mt-6 rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative mb-16">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold z-10">2</div>
+                            <h4 class="text-xl font-bold ml-4 text-gray-900">Middle Layer Progress</h4>
+                        </div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                                <p class="text-gray-600 mb-4">Development of AI-driven NPC interactions and environmental systems.</p>
+                                <div class="relative h-4 bg-gray-200 rounded-full">
+                                    <div class="absolute top-0 left-0 h-full bg-blue-600 rounded-full" style="width: 60%"></div>
+                                </div>
+                                <img src="Resources/middle.png" alt="Middle Layer Progress" class="mt-6 rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-blue-600 rounded-full w-8 h-8 flex items-center justify-center text-white font-bold z-10">3</div>
+                            <h4 class="text-xl font-bold ml-4 text-gray-900">Top Layer Progress</h4>
+                        </div>
+                        <div class="ml-12">
+                            <div class="bg-white rounded-xl shadow-lg p-6 hover-scale">
+                                <p class="text-gray-600 mb-4">User interface and interaction system implementation.</p>
+                                <div class="relative h-4 bg-gray-200 rounded-full">
+                                    <div class="absolute top-0 left-0 h-full bg-blue-600 rounded-full" style="width: 45%"></div>
+                                </div>
+                                <img src="Resources/top.png" alt="Top Layer Progress" class="mt-6 rounded-lg shadow-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 text-center py-6">
+        <p class="text-gray-600">&copy; 2025 AIGC Project | Open-Source AI for Games</p>
+    </footer>
+</body>
+</html>
